@@ -1,3 +1,15 @@
+## typescript setting
+
+# 사용법
+
+1. 예제 코드 작성시 type script 활용
+2. src dir에 해당 챕터 dir / dir 아래에 index.ts 생성
+3. 필요의 경우 utils dir 은 자유롭게 생성
+4. 코드 실행이 필요한 코드일 경우
+   - 코드 작성 후 /index.ts 에 작성한 코드를 import 해준 뒤, function 호출을 해준다.
+   1. yarn build || npm run build 로 build 파일 생성
+   2. yarn start || npm run start 로 build 파일 실행
+
 # 모던 자바스크립트 Deep Dive
 
 [모던 자바스크립트 Deep Dive](http://www.yes24.com/Product/Goods/92742567) 책 스터디
@@ -17,7 +29,6 @@
 3. 각자 맡은 부분이 아니더라도 학습 후 부족한 부분은 서로 공유
 4. 다음 주 브리핑 담당 지정
 
-
 ## 스터디 장소 및 시간
 
-[오브제커피]([http://naver.me/GmFVPBDW](http://naver.me/GmFVPBDW)) 일요일 오전 11시
+[오브제커피](<[http://naver.me/GmFVPBDW](http://naver.me/GmFVPBDW)>) 일요일 오전 11시
