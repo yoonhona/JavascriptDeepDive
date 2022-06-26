@@ -22,7 +22,7 @@ console.log(1 * 'string');
 (() => {
     try {
         var x = nan
-    }catch (e) {
+    } catch (e) {
         console.error(e)
     }
 })()
@@ -51,5 +51,6 @@ console.log(typeof foo)
 foo = []
 console.log(typeof foo)
 
-foo = function () {}
-console.log(typeof foo)
+foo = function () {
+}
+console.log(typeof foo);
