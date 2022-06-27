@@ -19,7 +19,7 @@
 
 ## 스터디 장소 및 시간
 
-[오브제커피]([http://naver.me/GmFVPBDW](http://naver.me/GmFVPBDW)) 일요일 오전 11시
+[오브제커피](http://naver.me/GmFVPBDW) 일요일 오전 11시
 
 ## 컨벤션
 
