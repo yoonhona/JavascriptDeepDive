@@ -17,7 +17,6 @@
 3. 각자 맡은 부분이 아니더라도 학습 후 부족한 부분은 서로 공유
 4. 다음 주 브리핑 담당 지정
 
-
 ## 스터디 장소 및 시간
 
-[오브제커피]([http://naver.me/GmFVPBDW](http://naver.me/GmFVPBDW)) 일요일 오전 11시
+[오브제커피](<[http://naver.me/GmFVPBDW](http://naver.me/GmFVPBDW)>) 일요일 오전 11시
