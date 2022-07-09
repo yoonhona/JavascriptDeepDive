@@ -1,15 +1,3 @@
-## typescript setting
-
-# 사용법
-
-1. 예제 코드 작성시 type script 활용
-2. src dir에 해당 챕터 dir / dir 아래에 index.ts 생성
-3. 필요의 경우 utils dir 은 자유롭게 생성
-4. 코드 실행이 필요한 코드일 경우
-   - 코드 작성 후 /index.ts 에 작성한 코드를 import 해준 뒤, function 호출을 해준다.
-   1. yarn build || npm run build 로 build 파일 생성
-   2. yarn start || npm run start 로 build 파일 실행
-
 # 모던 자바스크립트 Deep Dive
 
 [모던 자바스크립트 Deep Dive](http://www.yes24.com/Product/Goods/92742567) 책 스터디
