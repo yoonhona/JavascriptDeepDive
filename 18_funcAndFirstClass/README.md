@@ -61,4 +61,12 @@
 
 - console.dir 메서드로 함수 호출 가능
 
-![Alt text](/18_funcAndFirstClass/cap-1.png "Optional title")
+![Alt text](/18_funcAndFirstClass/cap-1.png "cap-1 image")
+
+- 함수의 모든 프로퍼티의 프로퍼티 어트리뷰트를 Object.getOwnPropertyDescriptors 메서드로 확인해보면 다음과 같다.
+
+![Alt text](/18_funcAndFirstClass/cap-2.png "cap-2 image")
+
+- 함수는 Object.prototype 객체로부터 **proto** 접근자 프로퍼티를 상속받는다.
+
+![Alt text](/18_funcAndFirstClass/cap-3.png "cap-3 image")
