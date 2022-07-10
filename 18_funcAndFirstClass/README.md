@@ -61,4 +61,4 @@
 
 - console.dir 메서드로 함수 호출 가능
 
-![Alt text](/path/to/cap-1.png "Optional title")
+![Alt text](/cap-1.png "Optional title")
