@@ -30,11 +30,35 @@
     }
   }
 
+  // 3. 함수의 매개변수에 전달할 수 있다.
   const increaser = makeCounter(auxs.increase);
   console.log(increaser()) // 1
   console.log(increaser()) // 2
 
+  // 3. 함수의 매개변수에 전달할 수 있다.
   const decreaser = makeCounter(auxs.decrease);
   console.log(decreaser()) // 1
   console.log(decreaser()) // 2
 ```
+
+- 함수가 일급 객체라는 것은 함수를 객체와 동일하게 사용할 수 있다는 의미다.
+- 함수는 값을 사용할 수 있는 곳(변수 할당문, 객체 프로퍼티 값, 배열의 요소, 함수 호출의 인수, 함수 반환문) 이라면 어디서즌지 리터럴 정의가 가능하다.
+- 런타임에 함수객체로 평가된다.
+- 일급객체로서 함수가 사용될 수 있는 부분은 함수형 프로그래밍을 가능케 하는 자바스크립트의 장점 중 하나다.
+
+  - 가독성, 반복문은 재귀로 표현 등의 이유로 현재는 사용되지 않는 패러다임으로 알고있다.
+
+- 일반 객체는 호출 불가, 함수 객체는 호출 가능하다.
+
+  ```
+  const name = "garam";
+  name(); // TypeError
+  ```
+
+- 함수객체의 고유 프로퍼티가 있다.
+
+## 함수 객체의 프로퍼티
+
+- console.dir 메서드로 함수 호출 가능
+
+![Alt text](/path/to/cap-1.png "Optional title")
