@@ -36,10 +36,10 @@
 - [06장: 데이터 타입](./06_DataType/readme.md)
 - [07장: 연산자](./07_operator/README.md)
 - [08장: 제어문](./08_control_flow/README.md)
-- 09장: 타입 변환과 단축 평가
-- 10장: 객체 리터럴
+- [09장: 타입 변환과 단축 평가](./09_TypeCoercion/README.md)
+- [10장: 객체 리터럴](./10_objectLiteral/README.md)
 - 11장: 원시 값과 객체의 비교
-- 12장: 함수
+- [12장: 함수](./12_function/readme.md)
 - 13장: 스코프
 - 14장: 전역 변수의 문제점
 - 14장: 전역 변수의 문제점
