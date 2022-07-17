@@ -40,7 +40,7 @@ const Circle1 = new Circle(5)
 console.log(Circle1) // 10
 ```
 
-> this 부분은 뒤에서 여기서는 다루기에 다루지 않겠습니다.
+> this 부분은 뒤에서 다루기에 여기서는 다루지 않겠습니다.
 
 ## 생성자 함수의 인스턴스 생성 과정
 
@@ -66,7 +66,7 @@ console.log(Circle1) // 10
 
 모든 함수가 `[[Contruct]]` 메서드를 갖는 것은 아니며 **함수 선언문, 함수 표현식, 클래스** 는 **constructor** (내부 메서드 `[[Contruct]]`를 가짐)
 <br>
-**ES6메서드, 화살표 함수** 는 \*\* **non-constructor** 이다.
+**ES6메서드, 화살표 함수** 는 **non-constructor** 이다.
 
 ### new 연산자
 
