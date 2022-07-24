@@ -46,7 +46,7 @@ foo();
 
 ```
 function foo() {
-  x = 10; // ReferenceError: x is not defined
+  x = 10;
 'use strict';
 }
 foo();
