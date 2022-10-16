@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+</head>
+<body>
+<p>DOM 요소의 기본 동작 중단</p>
+<a href="https://www.google.com">go</a>
+<input type="checkbox">
+<p>이벤트 전파 방지</p>
+<div class="container">
+    <button class="btn1">버튼 1</button>
+    <button class="btn2">버튼 2</button>
+    <button class="btn3">버튼 3</button>
+</div>
+
+<script>
+// 40.8.1 DOM 요소의 기본 동작 중단
+document.querySelector('a').onclick = e => {
+  // DOM 요소의 기본 동작을 중단
+  e.preventDefault();
+};
+document.querySelector('input[type=checkbox]').onclick = e => {
+  e.preventDefault();
+};
+
+// 40.8.2 이벤트 전파 방지
+
+// 컨테이너에 버튼 클릭의 이벤트 위임
+document.querySelector('.container').onclick = ({target}) => {
+  if (!target.matches('.container > button')) return;
+  target.style.color = 'red';
+};
+
+document.querySelector('.btn2').onclick = e => {
+  // 이벤트 전파를 중단, 상위 요소에서 이벤트 캐치가 되지 않는다.
+  e.stopPropagation();
+  e.target.style.color = 'blue';
+};
+
+</script>
+</body>
+</html>

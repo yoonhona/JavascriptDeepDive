@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+    <style>
+        #fruits {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #fruits li {
+            width: 100px;
+            cursor: pointer;
+        }
+
+        #fruits .active {
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<ul id="fruits">
+    <li id="apple" class="active">Apple</li>
+    <li id="banana">Banana</li>
+    <li id="orange">Orange</li>
+</ul>
+
+<div>선택된 네비게이션 아이템: <em class="msg">apple</em></div>
+
+<script>
+const $fruits = document.getElementById('fruits');
+const $msg = document.querySelector('.msg');
+
+/* 각 li 요소에 이벤트를 등록하는 방법
+   - 성능 저하의 원인 뿐 아니라 유지보수에도 부적절
+function activate({target}) {
+  [...$fruits.children].forEach($fruit => {
+    $fruit.classList.toggle('active', $fruit === target);
+    $msg.textContent = target.id;
+  });
+}
+
+document.getElementById('apple').onclick = activate;
+document.getElementById('banana').onclick = activate;
+document.getElementById('orange').onclick = activate;
+*/
+
+function activate({target}) {
+  // ul 하위 요소이 모든 이벤트에 반응하기 때문에
+  // li 요소에 한정되도록 체크
+  if (!target.matches('#fruits > li')) return;
+
+  [...$fruits.children].forEach($fruit => {
+    $fruit.classList.toggle('active', $fruit === target);
+    $msg.textContent = target.id;
+  });
+}
+
+// 이벤트 위임: 상위 요소(ul)는 하위 요소의 이벤트를 캐치
+$fruits.onclick = activate;
+
+</script>
+</body>
+</html>

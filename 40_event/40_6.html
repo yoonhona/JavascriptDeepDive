@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+</head>
+<body>
+<ul id="fruits">
+    <li>Apple</li>
+    <li id="banana">Banana</li>
+    <li id="orange">Orange</li>
+</ul>
+
+<script>
+const $fruits = document.getElementById('fruits');
+const $banana = document.getElementById('banana');
+const $orange = document.getElementById('orange');
+
+// https://developer.mozilla.org/en-US/docs/Web/Events/Event_handlers#using_onevent_properties
+// 프로퍼티 등록 시 이벤트는 타깃, 버브링 단계만 캐치
+function onClickByProperty(e) {
+  console.log(`onClickByProperty.이벤트 단계: ${e.eventPhase}`);
+  console.log(`onClickByProperty.이벤트 타깃: ${e.target.innerText}`);
+  console.log(`onClickByProperty.커런트 타깃: ${e.currentTarget.innerText}`);
+}
+$orange.onclick = onClickByProperty;
+$fruits.onclick = onClickByProperty;
+
+// #fruits 요소의 하위 요소인 li 요소를 클릭한 경우 캡처링 단계를 의벤트를 캐치한다.
+$fruits.addEventListener('click', e => {
+  console.clear();
+  // https://developer.mozilla.org/en-US/docs/Web/API/Event/eventPhase
+  // 1 캡처링 단계
+  // 2 타깃 단계: 이벤트 대상에 도착, 이벤트 리스너 실행
+  // 3 버블링 단계
+  console.log(`ul capture.이벤트 단계: ${e.eventPhase}`);
+  console.log(`ul capture.이벤트 타깃: ${e.target.innerText}`);
+  console.log(`ul capture.커런트 타깃: ${e.currentTarget.innerText}`);
+}, {
+  capture: true,
+});
+
+// 타깃 단계의 이벤트를 캐치한다.
+$banana.addEventListener('click', e => {
+  console.log(`li.이벤트 단계: ${e.eventPhase}`);
+  console.log(`li.이벤트 타깃: ${e.target.innerText}`);
+  console.log(`li.커런트 타깃: ${e.currentTarget.innerText}`);
+});
+
+// 버블링 단계의 이벤트를 캐치한다.
+$fruits.addEventListener('click', e => {
+  console.log(`ul bubble.이벤트 단계: ${e.eventPhase}`);
+  console.log(`ul bubble.이벤트 타깃: ${e.target.innerText}`);
+  console.log(`ul bubble:.커런트 타깃: ${e.currentTarget.innerText}`);
+});
+</script>
+</body>
+</html>
