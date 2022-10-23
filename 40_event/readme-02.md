@@ -13,15 +13,19 @@
 
 ![](./img/40-8.png)
 
+[40_6.html](https://hanam-people.github.io/JavascriptDeepDive/40_event/40_6.html)
+
 ## 40.7 이벤트 위임
 
-40_7.html 코드 참고
+[40_7.html](https://hanam-people.github.io/JavascriptDeepDive/40_event/40_7.html) 코드 참고
 
 ## 40.8 DOM 요소의 기본 동작 조작
 
-40_8.html 코드 참고
+[40_8.html](https://hanam-people.github.io/JavascriptDeepDive/40_event/40_8.html) 코드 참고
 
 ## 40.9 이벤트 핸들러 내부의 this
+
+[40_9.html](https://hanam-people.github.io/JavascriptDeepDive/40_event/40_9.html) 코드 참고
 
 ### 40.9.1 이벤트 핸들러 어트리뷰트 방식
 
@@ -34,9 +38,11 @@
 
 ## 40.10 이벤트 핸들러에 인수 전달
 
-40_10.html 코드 참고
+[40_10.html](https://hanam-people.github.io/JavascriptDeepDive/40_event/40_10.html) 코드 참고
 
 ## 40.11 커스텀 이벤트
+
+[40_11.html](https://hanam-people.github.io/JavascriptDeepDive/40_event/40_11.html) 코드 참고
 
 ### 40.11.1 커스텀 이벤트 생성
 
@@ -51,4 +57,4 @@
 ### 40.11.2 커스텀 이벤트 디스패치
 
 - 생성된 커스텀 이벤트는 dispatchEvent 메서드로 디스패치(dispatch) 메서드에 이벤트 객체를 인수로 전달하여 호출하면 이벤트가 발생됨
-- 
+-
