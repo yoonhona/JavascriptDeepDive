@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+</head>
+<body>
+
+<button id="1">isTrusted</button>
+<br>
+<br>
+
+<button id="2">Click me</button>
+<script>
+
+console.log('------------------------------------------------');
+// 40-46
+(() => {
+  const keyboardEvent = new KeyboardEvent('keyup');
+  console.log(keyboardEvent.type);
+
+  const customEvent = new CustomEvent('foo');
+  console.log(customEvent.type); // foo
+})();
+console.log('------------------------------------------------');
+// 40-47
+(() => {
+  const customEvent = new MouseEvent('click');
+  console.log(customEvent.type);
+  console.log(customEvent.bubbles);
+  console.log(customEvent.cancelable);
+})();
+console.log('------------------------------------------------');
+// 40-48
+(() => {
+  const customEvent = new MouseEvent('click', {
+    bubbles: true,
+    cancelable: true,
+  });
+  console.log(customEvent.bubbles);
+  console.log(customEvent.cancelable);
+})();
+console.log('------------------------------------------------');
+// 40-49
+(() => {
+  const customEvent = new MouseEvent('click', {
+    bubbles: true,
+    cancelable: true,
+    clientX: 50,
+    clientY: 100,
+  });
+  console.log(customEvent.clientX);
+  console.log(customEvent.clientY);
+
+  const keyboard = new KeyboardEvent('keyup', {
+    key: 'Enter',
+  });
+  console.log(keyboard.key);
+})();
+console.log('------------------------------------------------');
+// 40-50
+(() => {
+  document.getElementById('1').addEventListener('click', (e) => {
+    console.log(e.isTrusted);
+  });
+  const custom = new InputEvent('foo');
+  console.log(custom.isTrusted);
+})();
+console.log('------------------------------------------------');
+(() => {
+  const $btn = document.getElementById('2');
+  $btn.addEventListener('click', e => {
+    console.log(e);
+    alert(`${e} clicked`);
+
+  });
+  const customEvent = new MouseEvent('click');
+  $btn.dispatchEvent(customEvent);
+})();
+console.log('------------------------------------------------');
+(() => {
+  const $btn = document.getElementById('2');
+  $btn.addEventListener('foo', e => {
+    console.log(e);
+    alert(e.detail.message);
+
+  });
+  const customEvent = new CustomEvent('foo', {
+    detail: {
+      message: 'Hello'
+    }
+  });
+  $btn.dispatchEvent(customEvent);
+})();
+
+
+</script>
+</body>
+</html>
